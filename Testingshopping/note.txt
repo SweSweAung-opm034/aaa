@@ -1,0 +1,44 @@
+1 localization) https://saturngod.gitbooks.io/laravel-myanmar-docs/localization.html
+
+ko123ko@ss#
+
+http://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class
+http://doc.prestashop.com/display/PS14/Database+Structure
+(upload image file)  https://laracasts.com/discuss/channels/laravel/image-upload-file-does-not-working
+
+(welcome.blade.php)
+@if (Route::has('login'))
+                <div class="top-right links">
+                    @if (Auth::check())
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
+                </div>
+            @endif
+
+
+(for log out) app.blade.php
+   <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+
+
+using link now
+C:\xampp\htdocs\onlineShopping\resources\views\welcome.blade.php
+C:\xampp\htdocs\onlineShopping\resources\views\auth\login.blade.php
+C:\xampp\htdocs\onlineShopping\resources\views\auth\register.blade.php
+C:\xampp\htdocs\onlineShopping\resources\views\layouts\app.blade.php
+C:\xampp\htdocs\onlineShopping\resources\views\customer\home.blade.php
+C:\xampp\htdocs\onlineShopping\resources\views\home.blade.php
